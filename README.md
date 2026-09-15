@@ -35,6 +35,26 @@ Modernized an inherited consumer-lending platform spanning loan origination, und
 
 ---
 
+### 🧪 Rev-Eval — Skills Assessment & Evaluation Platform
+**FastAPI | Next.js | Distributed Systems | Security | Testing**
+
+🔗 [View Repository](https://github.com/RevatureFDEPEP/rev-eval)
+
+Contributed production-style features to an existing multi-service assessment platform.
+
+**Engineering highlights:**
+- Built quiz-session lifecycle with server-authoritative expiration
+- Implemented scoring with idempotency and pessimistic locking
+- Added timed quiz UX, autosave, and submission state management
+- Built Reporting & Analytics capabilities with aggregate and ranking endpoints
+- Strengthened JWT verification and service-level RBAC
+- Added PostgreSQL integration testing and Playwright E2E coverage
+- Improved CI/CD and request traceability across services
+
+**Stack:**  
+`Python` `FastAPI` `Next.js` `TypeScript` `PostgreSQL` `MongoDB` `Docker` `GitHub Actions`
+
+---
 ### 🛒 MarketHub
 **Java | Spring Boot | Backend Engineering**
 
