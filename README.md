@@ -28,7 +28,7 @@ payments, lending, cards, KYC, fraud detection and notifications.
 - Protected card data by **masking PANs at the API boundary** — responses carry only `last4`
 - Built a **Next.js / TypeScript banking console** using a server-side BFF pattern, so the
   browser never holds a bearer token
-- Added JUnit/Mockito/Testcontainers, Vitest and Playwright verification — **155 automated
+- Added JUnit/Mockito/Testcontainers, Vitest and Playwright verification — **160 automated
   tests in CI**, plus 9 live-stack Playwright scenarios on demand
 - Containerized the full stack with **Docker Compose**
 - Defined **AWS infrastructure using Terraform**
