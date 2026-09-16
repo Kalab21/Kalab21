@@ -4,7 +4,7 @@
 
 I am a software engineer with **6+ years of experience** building secure, scalable enterprise applications across **banking, financial services, insurance, analytics, and AI-enabled systems**.
 
-My core engineering background includes **Java, Spring Boot, Microservices, REST APIs, Kafka, SQL, AWS, Docker, Kubernetes, and CI/CD**, complemented by hands-on experience with **Python, FastAPI, PostgreSQL, Redis, RAG, and AI-assisted software development**.
+My core engineering background includes **Java, Spring Boot, Microservices, REST APIs, Kafka, SQL, AWS, Docker, Kubernetes, and CI/CD**, complemented by hands-on experience with **Python, FastAPI, PostgreSQL, Redis, RAG, and AI-assisted software development**. I also build the full stack end to end, including **Next.js / React / TypeScript** front ends over my own Java services.
 
 I enjoy solving complex problems in existing systems — understanding business requirements, tracing distributed workflows, identifying architecture and security risks, and delivering reliable solutions without unnecessarily replacing working systems.
 
@@ -12,7 +12,34 @@ I enjoy solving complex problems in existing systems — understanding business 
 
 ## 🚀 Featured Projects
 
-### 🏦 Meridian Lending Platform
+### 🏦 Banking Platform
+**Java | Spring Boot | Microservices | Kafka | Full Stack**
+
+🔗 [View Repository](https://github.com/Kalab21/banking-platform)
+
+Built a full-stack, event-driven retail banking platform spanning accounts, transactions,
+payments, lending, cards, KYC, fraud detection and notifications.
+
+**Engineering highlights:**
+- Designed a **13-service Spring Boot architecture** behind an API gateway with Eureka discovery
+- Implemented **Kafka-driven event workflows** with PostgreSQL (database-per-service) and Redis
+- Built secure **JWT/RBAC authentication with TOTP two-factor login**
+- Added account, overdraft, transaction and loan amortization business logic
+- Protected card data by **masking PANs at the API boundary** — responses carry only `last4`
+- Built a **Next.js / TypeScript banking console** using a server-side BFF pattern, so the
+  browser never holds a bearer token
+- Added JUnit/Mockito/Testcontainers, Vitest and Playwright verification — **155 automated
+  tests in CI**, plus 9 live-stack Playwright scenarios on demand
+- Containerized the full stack with **Docker Compose**
+- Defined **AWS infrastructure using Terraform**
+- Documented known distributed-system gaps instead of hiding them
+
+**Stack:**  
+`Java 17` `Spring Boot` `Spring Cloud` `Kafka` `PostgreSQL` `Redis` `Next.js` `TypeScript` `Docker` `AWS` `Terraform` `Testcontainers` `Playwright`
+
+---
+
+### 💳 Meridian Lending Platform
 **Forward Deployed Engineering | FinTech | AI | Distributed Systems**
 
 🔗 [View Repository](https://github.com/2463-FDE/KK-meridian-lending)
@@ -55,6 +82,7 @@ Contributed production-style features to an existing multi-service assessment pl
 `Python` `FastAPI` `Next.js` `TypeScript` `PostgreSQL` `MongoDB` `Docker` `GitHub Actions`
 
 ---
+
 ### 🛒 MarketHub
 **Java | Spring Boot | Backend Engineering**
 
@@ -90,6 +118,9 @@ Full-stack e-commerce application built around a secure Spring Boot backend.
 ### Distributed Systems & Integration
 `Apache Kafka` `Event-Driven Architecture` `API Gateway` `Redis` `SFTP` `SMTP`
 
+### Frontend / Full Stack
+`Next.js` `React` `TypeScript` `Tailwind CSS`
+
 ### Databases
 `PostgreSQL` `Oracle` `MySQL` `MongoDB` `SQL` `Query Optimization` `Data Modeling`
 
@@ -103,7 +134,7 @@ Full-stack e-commerce application built around a secure Spring Boot backend.
 `RAG` `LLM Integration` `Agentic AI` `Human-in-the-Loop` `AI Evaluation` `AI-Assisted Development`
 
 ### Testing
-`JUnit 5` `Mockito` `Pytest` `Playwright` `Integration Testing` `TDD`
+`JUnit 5` `Mockito` `Testcontainers` `Vitest` `Pytest` `Playwright` `Integration Testing` `TDD`
 
 ---
 
