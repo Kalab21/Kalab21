@@ -93,6 +93,7 @@ A Java full-stack marketplace with Admin, Seller and Buyer workflows: seller app
 ## Contact
 
 - **Email:** [kalabkebe12@gmail.com](mailto:kalabkebe12@gmail.com)
+- **Phone:** 240-288-1031
 - **GitHub:** [github.com/Kalab21](https://github.com/Kalab21)
 - **Portfolio:** [developer-portfolio-iota-ten.vercel.app](https://developer-portfolio-iota-ten.vercel.app/)
 - **Location:** Maryland, USA
