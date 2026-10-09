@@ -2,36 +2,35 @@
 
 ## Senior Software Engineer | Forward Deployed Engineer
 
+**Java · Distributed Systems · AWS · Applied AI**
+
 **Portfolio:** [developer-portfolio-iota-ten.vercel.app](https://developer-portfolio-iota-ten.vercel.app/)
 
-I'm a software engineer with **6+ years of experience** building and modernizing enterprise systems across **banking, financial services, insurance, analytics, and AI-enabled applications**.
+I'm a software engineer with **6+ years** building and modernizing enterprise systems across **banking, financial services, insurance and analytics**.
 
-My core is **Java, Spring Boot, distributed systems, Kafka, SQL and AWS**. More recently I've worked in **Python/FastAPI, RAG and data engineering**, and I build full-stack with **Next.js / React / TypeScript** on top of my own Java services.
+My core is **Java/Spring Boot and distributed systems**, with **AWS and data engineering** experience and recent **Forward Deployed Engineering** work in **Python/FastAPI, RAG and applied AI**.
 
-I'm most useful on existing systems: understanding the business problem, tracing how a distributed workflow really behaves, finding the architecture and security risks, and fixing them without replacing what already works.
+I'm most effective on inherited systems: tracing how real workflows behave, finding architecture, security and reliability gaps, and shipping verified changes without replacing what already works.
 
 ---
 
 ## Featured projects
 
-The [portfolio](https://developer-portfolio-iota-ten.vercel.app/) has the full case studies. Short versions:
+The [portfolio](https://developer-portfolio-iota-ten.vercel.app/projects) has the full case studies. Short versions:
 
 ### Northbank — personal flagship project
-**Distributed Systems & Financial Engineering · Java full-stack**
+**Distributed Systems & Financial Engineering**
 
 [View repository](https://github.com/Kalab21/banking-platform)
 
 An event-driven retail banking platform covering accounts, transfers, cards, loans, credit applications and staff review.
 
-- **11 Spring Boot business services** plus an **API Gateway and Eureka** (13 backend processes in total), with a database per service on PostgreSQL, Redis, and Kafka events
-- Money movement built around **row locking, idempotency keys, a transactional outbox** and reconciliation of unknown outcomes
-- **JWT/RBAC** with TOTP two-factor login, shared ownership checks, and card numbers masked at the API boundary
-- **Next.js / TypeScript console** using a server-side BFF, so the browser never holds a bearer token
-- **1,482 automated tests in CI** (backend, frontend and offline Playwright), plus 46 live-stack Playwright tests and 200 full-stack assertions that run on demand
-- Docker Compose for the full stack; Terraform describes an **AWS reference architecture that is not deployed**
-- Runs on synthetic data only; no real money moves
+- **11 Spring Boot business services** plus an API gateway and Eureka (13 backend processes), each service owning its PostgreSQL database, with Redis and Kafka events
+- Money movement built on **row locking, idempotency keys and a transactional outbox**, with shared ownership checks across services
+- **Next.js backend-for-frontend**, so the browser never holds a bearer token
+- **1,482 application tests in CI**; the AWS architecture is **modeled in Terraform**, not deployed
 
-`Java 17` `Spring Boot` `Kafka` `PostgreSQL` `Redis` `Next.js` `TypeScript` `Docker` `Terraform` `Playwright`
+`Java 21` `Spring Boot` `Kafka` `PostgreSQL` `Redis` `AWS` `Next.js`
 
 ---
 
@@ -40,15 +39,27 @@ An event-driven retail banking platform covering accounts, transfers, cards, loa
 
 [View repository](https://github.com/2463-FDE/KK-meridian-lending)
 
-Team brownfield modernization of a consumer-lending platform: origination, decisioning, disclosures, servicing, payments and reconciliation, across eight FastAPI services.
+Team brownfield modernization of a consumer-lending platform across **eight FastAPI backend services**: origination, decisioning, disclosures, servicing, payments and reconciliation.
 
-- Added a **staff-only, read-only RAG policy assistant**. It is advisory: the deterministic decisioning service stays the system of record and the assistant never makes the lending decision
-- Strengthened RBAC and service ownership, decision finality, idempotency and auditability
-- Worked on the append-only servicing ledger, maker-checker approvals and payment reconciliation
-- Wrote specs and ADRs, added automated verification of TILA/APR calculations, and added metrics and tracing
-- Fictional demo data and a mocked card processor; no compliance certification is claimed
+- **Grounded RAG** policy assistant and a **bounded LangChain/AWS Bedrock agent** with one read-only policy tool, both advisory and staff-only
+- **Deterministic LangGraph orchestration** for credit decisions and disclosure assembly; lending decisions stay deterministic and authoritative
+- **LangSmith tracing**, plus RBAC, maker-checker servicing, payments and reconciliation controls
 
-`Python` `FastAPI` `PostgreSQL` `Redis` `Next.js` `RAG` `Docker` `GitHub Actions`
+`Python` `FastAPI` `RAG` `LangChain` `LangGraph` `AWS Bedrock` `LangSmith` `Next.js`
+
+---
+
+### Policy RAG Platform — secure retrieval / applied AI project
+
+[View repository](https://github.com/Kalab21/policy-rag-platform)
+
+A FastAPI service that answers questions over policy documents, retrieving only from documents the caller is authorized to read.
+
+- **PostgreSQL + pgvector** with HNSW; semantic, full-text and hybrid retrieval, with optional cross-encoder reranking
+- **Retrieval-time authorization**, a LangGraph evidence gate, citations or a refusal, and read-only **MCP** tools
+- **OpenTelemetry**, held-out retrieval evaluation in CI, and AWS infrastructure **modeled in Terraform**
+
+`Python` `FastAPI` `PostgreSQL` `pgvector` `Hybrid Retrieval` `LangGraph` `MCP` `OpenTelemetry`
 
 ---
 
@@ -59,13 +70,13 @@ My work: [kalabek integration branch](https://github.com/RevatureFDEPEP/rev-eval
 
 My contributions live on the `kalabek` branch, not on the organization's main.
 
-- Scoring engine with idempotent submissions and locking
-- Timed quiz UX with autosave and a submit state machine
-- Reporting & Analytics service with aggregate and ranking endpoints
-- JWT verification and service-level RBAC; request-ID tracing across services
-- PostgreSQL integration tests and Playwright end-to-end coverage
+A FastAPI and Next.js multi-service assessment platform with trainer and participant workflows.
 
-`Python` `FastAPI` `Next.js` `TypeScript` `PostgreSQL` `MongoDB` `Docker` `GitHub Actions`
+- Scoring with **idempotent submissions and row locking**, plus reporting and analytics
+- **JWT/RBAC** re-verified in each service, record ownership and a trainer-only question bank
+- Request-ID propagation, PostgreSQL integration tests and CI
+
+`Python` `FastAPI` `Next.js` `React` `TypeScript` `PostgreSQL` `MongoDB` `Docker`
 
 ---
 
@@ -74,28 +85,27 @@ My contributions live on the `kalabek` branch, not on the organization's main.
 
 [View repository](https://github.com/Kalab21/markethub)
 
-A Java full-stack marketplace with Admin, Seller and Buyer workflows: seller approval, a product catalogue, cart and order checkout. Built with Spring Boot, Spring MVC, Spring Security, JPA/MySQL, Thymeleaf, Docker and GitHub Actions, with 39 automated tests. Checkout creates orders; there is no external payment processor.
+A server-rendered marketplace with Admin, Seller and Buyer workflows, record ownership checks and CSRF protection, built with Spring Boot, Spring MVC, Spring Security, MySQL and Thymeleaf. **87 automated tests**, including 38 authorization tests through the real Spring Security filter chain.
 
-`Java 17` `Spring Boot` `Spring Security` `Spring Data JPA` `MySQL` `Docker`
+`Java 17` `Spring Boot` `Spring Security` `MySQL` `Thymeleaf`
 
 ---
 
 ## Skills
 
-- **Software & distributed systems:** Java 8–21, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, REST APIs, Microservices, Kafka, API Gateway
-- **Data engineering:** Advanced SQL, PostgreSQL, Oracle, MySQL, MongoDB, Redis, ETL/ELT, AWS Athena/Glue/S3, data modeling, Power BI
-- **Cloud & DevOps:** AWS, Docker, Kubernetes, GitHub Actions, Jenkins, Maven, CI/CD
-- **AI & FDE:** Python, FastAPI, RAG, LLM integration, AI evaluation, Human-in-the-Loop, brownfield analysis, requirements synthesis, ADRs
-- **Security & testing:** OAuth2/OIDC, JWT, RBAC, OWASP concepts, JUnit 5, Mockito, Testcontainers, Pytest, Playwright
+- **Backend & distributed systems:** Java 8–21 · Spring Boot · Spring Security · REST APIs · Microservices · Kafka · Event-Driven Architecture · Idempotency
+- **Cloud & data:** AWS · ECS/Fargate · Lambda · S3 · RDS · MSK · Glue · Athena · PostgreSQL · MongoDB · Redis · SQL
+- **Applied AI & retrieval:** Python · FastAPI · RAG · LangChain · LangGraph · AWS Bedrock · LangSmith · pgvector · Hybrid Retrieval · MCP · AI Evaluation
+- **Frontend:** React · Next.js · TypeScript
+- **Platform, security & testing:** Docker · Kubernetes · Terraform · GitHub Actions · Jenkins · JWT · RBAC · OpenTelemetry · Prometheus · Grafana · JUnit 5 · Pytest · Playwright · Testcontainers
 
 ---
 
 ## Contact
 
 - **Email:** [kalabkebe12@gmail.com](mailto:kalabkebe12@gmail.com)
-- **Phone:** 240-288-1031
-- **GitHub:** [github.com/Kalab21](https://github.com/Kalab21)
 - **Portfolio:** [developer-portfolio-iota-ten.vercel.app](https://developer-portfolio-iota-ten.vercel.app/)
+- **GitHub:** [github.com/Kalab21](https://github.com/Kalab21)
 - **Location:** Maryland, USA
 
-**Currently focused on:** distributed systems · Forward Deployed Engineering · applied AI
+**Currently focused on:** Java & Spring Engineering · Distributed Systems & Cloud · Applied AI, RAG & Agents
