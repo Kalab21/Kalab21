@@ -18,7 +18,7 @@ I'm most effective on inherited systems: tracing how real workflows behave, find
 
 The [portfolio](https://developer-portfolio-iota-ten.vercel.app/projects) has the full case studies. Short versions:
 
-### Northbank — personal flagship project
+### Northbank — Event-Driven Retail Banking Platform
 **Distributed Systems & Financial Engineering**
 
 [View repository](https://github.com/Kalab21/banking-platform)
@@ -34,12 +34,12 @@ An event-driven retail banking platform covering accounts, transfers, cards, loa
 
 ---
 
-### Meridian Lending — team / FDE project
+### Meridian Lending — Consumer Lending & Applied AI Platform
 **Forward Deployed Engineering & Applied AI**
 
 [View repository](https://github.com/2463-FDE/KK-meridian-lending)
 
-Team brownfield modernization of a consumer-lending platform across **eight FastAPI backend services**: origination, decisioning, disclosures, servicing, payments and reconciliation.
+Brownfield modernization of a consumer-lending platform across **eight FastAPI backend services**: origination, decisioning, disclosures, servicing, payments and reconciliation.
 
 - **Grounded RAG** policy assistant and a **bounded LangChain/AWS Bedrock agent** with one read-only policy tool, both advisory and staff-only
 - **Deterministic LangGraph orchestration** for credit decisions and disclosure assembly; lending decisions stay deterministic and authoritative
@@ -49,7 +49,7 @@ Team brownfield modernization of a consumer-lending platform across **eight Fast
 
 ---
 
-### Policy RAG Platform — secure retrieval / applied AI project
+### Policy RAG Platform — Secure Retrieval & Grounded AI Platform
 
 [View repository](https://github.com/Kalab21/policy-rag-platform)
 
@@ -63,8 +63,7 @@ A FastAPI service that answers questions over policy documents, retrieving only 
 
 ---
 
-### Rev-Eval — team / FDE project
-**Full-Stack FDE & Platform Engineering**
+### Rev-Eval — Skills Assessment & Analytics Platform
 
 My work: [kalabek integration branch](https://github.com/RevatureFDEPEP/rev-eval/tree/kalabek) · Organization repository: [RevatureFDEPEP/rev-eval](https://github.com/RevatureFDEPEP/rev-eval)
 
@@ -80,7 +79,7 @@ A FastAPI and Next.js multi-service assessment platform with trainer and partici
 
 ---
 
-### MarketHub — personal project
+### MarketHub — Full-Stack Java Marketplace
 **Java full-stack**
 
 [View repository](https://github.com/Kalab21/markethub)
